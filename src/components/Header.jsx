@@ -111,7 +111,7 @@ const Header = () => {
         >
           <div className="mb-4 flex justify-center">
             <img 
-              src={project}
+              src="https://i.ibb.co.com/spGy70B6/Screenshot-2025-03-29-221149.png"
               alt="Project" 
               className="h-34 object-contain"
               onError={(e) => {
@@ -125,7 +125,9 @@ const Header = () => {
             <h2 className="text-2xl font-bold">Projects</h2>
           </div>
           <div className="mt-4 flex justify-end">
-            <MotionDiv
+            <motion.a
+            href="/works"
+            target="_blank"
               whileHover={{ rotate: 90 }}
               animate={{ rotate: isHoveredProjects ? 90 : 0 }}
               transition={{ duration: 0.3 }}
@@ -134,7 +136,7 @@ const Header = () => {
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
-            </MotionDiv>
+            </motion.a>
           </div>
         </MotionDiv>
 

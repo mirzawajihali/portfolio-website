@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
   content: [
     "./index.html",
@@ -20,8 +21,8 @@ export default {
         light: {
           ...require("daisyui/src/theming/themes")["light"],
           "base-100": "#ffffff",
-          "base-200": "#f8f9fa",
-          "base-300": "#e9ecef",
+          "base-300": "#d6d3d1",   // Light warm gray (soft borders)
+          "base-200": "#f5f5f4",   // Warm off-white (stone/eggshell)
         },
         dark: {
           ...require("daisyui/src/theming/themes")["dark"],

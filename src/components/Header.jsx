@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Marquee from './Marquee';
 import developer from "../assets/images/developer.png"
 import project from "../assets/images/studentManagment.png"
+import GitHubC from './GitHubC';
 
 
 
@@ -335,6 +336,19 @@ I'm passionate about creating intuitive and impactful web applications that solv
               </svg>
             </MotionDiv>
           </div>
+        </MotionDiv>
+
+
+        <MotionDiv 
+  className="bg-base-200 rounded-3xl p-6 w-full flex flex-col  justify-center  md:col-span-12"
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5, delay: 0.7 }}
+  onMouseEnter={() => setIsHoveredWork(true)}
+  onMouseLeave={() => setIsHoveredWork(false)}
+>
+        <GitHubC></GitHubC>
+
         </MotionDiv>
 
        

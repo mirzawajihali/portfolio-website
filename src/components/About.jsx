@@ -1,10 +1,10 @@
 import React from 'react';
+import GitHubC from './GitHubC';
 
 const About = () => {
     return (
         <div>
-            <h1>About</h1>
-            
+            <GitHubC></GitHubC>
         </div>
     );
 };

@@ -326,9 +326,9 @@ const ContactUs = () => {
                                     variants={itemVariants}
                                 >
                                     <details className="group">
-                                        <summary className="flex justify-between items-center font-medium cursor-pointer list-none p-4  bg-base-200 hover:bg-gray-50">
+                                        <summary className="flex justify-between items-center font-medium cursor-pointer list-none p-4  bg-base-200">
                                             <span className=" font-semibold">{faq.question}</span>
-                                            <span className="transition group-open:rotate-180 text-[#88BDF2]">
+                                            <span className="transition group-open:rotate-180 ">
                                                 <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
                                                     <path d="M6 9l6 6 6-6"></path>
                                                 </svg>

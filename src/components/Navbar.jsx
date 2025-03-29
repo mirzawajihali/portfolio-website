@@ -19,9 +19,24 @@ const Navbar = () => {
 
   return (
     <div className="navbar bg-base-100 px-4 md:px-8 lg:px-12 shadow-sm fixed top-0 z-50">
-      <div className="navbar-start">
-        <Link to="/" className="text-xl md:text-2xl font-bold">Mirza Wajih Ali</Link>
-      </div>
+  <div className="navbar-start">
+  <Link 
+    to="/" 
+    className="
+      text-xl md:text-2xl 
+      font-bold 
+      
+     
+      transition-all duration-300 
+      tracking-tight 
+      drop-shadow-sm
+      hover:scale-105
+      active:scale-95
+    "
+  >
+    Mirza Wajih Ali
+  </Link>
+</div>
       
       {/* Desktop menu */}
       <div className="navbar-center hidden md:flex">

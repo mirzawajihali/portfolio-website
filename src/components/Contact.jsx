@@ -100,7 +100,7 @@ const ContactUs = () => {
                             type="button"
                             className={`px-4 py-2 text-sm font-medium rounded-md ${
                                 activeTab === 'contact' 
-                                ? ' bg-base-300 text-white' 
+                                ? ' bg-base-300  ' 
                                 : '  hover:bg-gray-100'
                             }`}
                             onClick={() => setActiveTab('contact')}
@@ -111,7 +111,7 @@ const ContactUs = () => {
                             type="button"
                             className={`px-4 py-2 text-sm font-medium rounded-md ${
                                 activeTab === 'faq' 
-                                ? ' bg-base-300 text-white' 
+                                ? ' bg-base-300  ' 
                                 : '  hover:bg-gray-100'
                             }`}
                             onClick={() => setActiveTab('faq')}
@@ -131,9 +131,9 @@ const ContactUs = () => {
                     >
                         {/* Contact Information */}
                         <motion.div variants={itemVariants} className=" bg-base-200 rounded-lg shadow-lg overflow-hidden">
-                            <div className=" bg-base-300 p-6 text-white">
+                            <div className=" bg-base-300 p-6  ">
                                 <h3 className="text-2xl font-bold mb-2">Contact Information</h3>
-                                <p className="text-[#BDDDFC]">Reach out to us using any of the following methods</p>
+                                <p className="  ">Reach out to us using any of the following methods</p>
                             </div>
                             <div className="p-6">
                                 <ul className="space-y-6">
@@ -204,9 +204,9 @@ const ContactUs = () => {
                         
                         {/* Contact Form */}
                         <motion.div variants={itemVariants} className=" bg-base-200 rounded-lg shadow-lg overflow-hidden">
-                            <div className=" bg-base-300 p-6 text-white">
+                            <div className=" bg-base-300 p-6  ">
                                 <h3 className="text-2xl font-bold mb-2">Send Us A Message</h3>
-                                <p className="text-[#BDDDFC]">We'll get back to you as soon as possible</p>
+                                <p className="  ">We'll get back to you as soon as possible</p>
                             </div>
                             <div className="p-6">
                                 {formStatus === 'success' ? (
@@ -281,7 +281,7 @@ const ContactUs = () => {
                                         <div>
                                             <motion.button
                                                 type="submit"
-                                                className="w-full  bg-base-300 text-white py-3 px-6 rounded-md hover:bg-[#6A89A7] transition-colors duration-300 flex items-center justify-center"
+                                                className="w-full  bg-base-300   py-3 px-6 rounded-md hover:bg-[#6A89A7] transition-colors duration-300 flex items-center justify-center"
                                                 whileHover={{ scale: 1.02 }}
                                                 whileTap={{ scale: 0.98 }}
                                                 disabled={formStatus === 'sending'}
@@ -356,7 +356,7 @@ const ContactUs = () => {
                             </p>
                             <motion.button
                                 onClick={() => setActiveTab('contact')}
-                                className="bg-[#594238] text-white py-2 px-6 rounded-md hover:bg-[#6A89A7] transition-colors duration-300 inline-flex items-center"
+                                className="bg-[#594238]   py-2 px-6 rounded-md hover:bg-[#6A89A7] transition-colors duration-300 inline-flex items-center"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >

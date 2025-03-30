@@ -6,7 +6,8 @@ import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 
 const Navbar = () => {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+ 
 
   // Toggle theme between dark and light
   const toggleTheme = () => {
@@ -93,7 +94,7 @@ const Navbar = () => {
         </Link>
         
         {/* Mobile menu button */}
-        <div className="dropdown dropdown-end md:hidden">
+        {/* <div className="dropdown dropdown-end md:hidden">
           <button 
             tabIndex={0} 
             className="btn btn-ghost"
@@ -117,7 +118,32 @@ const Navbar = () => {
               </li>
             </ul>
           )}
-        </div>
+        </div> */}
+         <div className="dropdown dropdown-end md:hidden">
+      <button tabIndex={0} className="btn btn-ghost">
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          className="h-5 w-5" 
+          fill="none" 
+          viewBox="0 0 24 24" 
+          stroke="currentColor"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" />
+        </svg>
+      </button>
+      
+      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/works">Works</Link></li>
+        <li><Link to="/contact">Contact</Link></li>
+        <li className="mt-2">
+          <Link to="/contact" className="btn btn-neutral text-base-100 btn-sm justify-start">
+            Let's talk
+          </Link>
+        </li>
+      </ul>
+    </div>
       </div>
     </div>
     

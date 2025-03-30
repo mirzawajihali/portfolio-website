@@ -6,6 +6,7 @@ import Marquee from './Marquee';
 import developer from "../assets/images/developer.png"
 import project from "../assets/images/studentManagment.png"
 import GitHubC from './GitHubC';
+import SkillsSection from './SkillsSection';
 
 
 
@@ -351,30 +352,39 @@ I'm passionate about creating intuitive and impactful web applications that solv
 
         </MotionDiv>
 
-       
 
        
+
 
 
 
 <MotionDiv 
-  className="bg-base-300 rounded-3xl p-6 w-full flex flex-col  justify-center  md:col-span-12"
+  className="bg-base-300 rounded-3xl p-6 w-full flex flex-col lg:flex-row  justify-center  md:col-span-12"
   initial={{ opacity: 0, y: 20 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.5, delay: 0.7 }}
   onMouseEnter={() => setIsHoveredWork(true)}
   onMouseLeave={() => setIsHoveredWork(false)}
 >
+      
+<div className=" w-1/2 ">
   
-    <div className="text-5xl text-center w-full font-bold">
+<SkillsSection></SkillsSection>
+</div>
+
+
+<div className="text-5xl text-center w-1/2 font-bold">
       Let's work <span className="text-blue-500">together.</span>
     </div>
- 
-  
-</MotionDiv>
+
+        </MotionDiv>
+
+
+
  
 
       </div>
+             
     </div>
   );
 };

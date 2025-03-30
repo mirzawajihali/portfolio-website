@@ -123,7 +123,7 @@ I'm passionate about creating intuitive and impactful web applications that solv
           <div className="grid grid-cols-5 gap-4 mb-8">
         {/* Github */}
         <a 
-          href="https://dribbble.com/yourusername" 
+          href="https://dribbble.com/mirzawajihali" 
           target="_blank" 
           rel="noopener noreferrer"
           className="bg-base-300 rounded-full p-4 flex items-center justify-center hover:bg-base-300 transition-colors"
@@ -133,7 +133,7 @@ I'm passionate about creating intuitive and impactful web applications that solv
       
         {/* Twitter */}
         <a 
-          href="https://twitter.com/yourusername" 
+          href="https://twitter.com/mirzawajihali" 
           target="_blank" 
           rel="noopener noreferrer"
           className="bg-base-300 rounded-full p-4 flex items-center justify-center hover:bg-base-300 transition-colors"
@@ -143,7 +143,7 @@ I'm passionate about creating intuitive and impactful web applications that solv
       
         {/* Facebook */}
         <a 
-          href="https://facebook.com/yourusername" 
+          href="https://facebook.com/mirzawajihali" 
           target="_blank" 
           rel="noopener noreferrer"
           className="bg-base-300 rounded-full p-4 flex items-center justify-center hover:bg-base-300 transition-colors"
@@ -153,7 +153,7 @@ I'm passionate about creating intuitive and impactful web applications that solv
       
         {/* Instagram */}
         <a 
-          href="https://instagram.com/yourusername" 
+          href="https://instagram.com/mirzawajihali" 
           target="_blank" 
           rel="noopener noreferrer"
           className="bg-base-300 rounded-full p-4 flex items-center justify-center hover:bg-base-300 transition-colors"
@@ -163,7 +163,7 @@ I'm passionate about creating intuitive and impactful web applications that solv
       
         {/* LinkedIn */}
         <a 
-          href="https://linkedin.com/in/yourusername" 
+          href="https://linkedin.com/in/mirzawajihali" 
           target="_blank" 
           rel="noopener noreferrer"
           className="bg-base-300 rounded-full p-4 flex items-center justify-center hover:bg-base-300 transition-colors"

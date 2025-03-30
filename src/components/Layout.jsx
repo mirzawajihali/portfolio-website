@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Navbar from './Navbar';
 import { Outlet } from 'react-router-dom';
+import Footer from './Footer';
 
 const Layout = () => {
   // Apply dark theme by default when the component mounts
@@ -16,7 +17,9 @@ const Layout = () => {
       <Navbar />
       <main className="pt-24 px-4 md:px-8 lg:px-12">
         <Outlet />
+
       </main>
+      <Footer></Footer>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaUniversity, FaCheck, FaPaperPlane } from 'react-icons/fa';
+import { Resend } from 'resend';
 
 import Loader from './Loader';
 
@@ -22,7 +23,7 @@ const ContactUs = () => {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setFormStatus('sending');
         
@@ -41,6 +42,23 @@ const ContactUs = () => {
                 setFormStatus(null);
             }, 3000);
         }, 1500);
+
+        e.preventDefault();
+
+    const resend = new Resend(process.env.RESEND_KEY); // ⚠️ Avoid exposing API key in frontend!
+
+    try {
+      await resend.emails.send({
+        from: 'Acme <onboarding@resend.dev>',
+        to: 'your-email@gmail.com',
+        subject: `New message from ${formData.name}`,
+        text: formData.message,
+        reply_to: formData.email,
+      });
+      alert('Email sent!');
+    } catch (error) {
+      alert('Failed to send: ' + error.message);
+    }
     };
 
     // Animation variants

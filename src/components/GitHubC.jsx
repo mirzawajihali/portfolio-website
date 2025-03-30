@@ -6,7 +6,7 @@ const GitHubC = () => {
     <div>
       <div className="max-w-6xl mx-auto p-6">
         <div className="
-          bg-base-100
+          bg-base-300
           rounded-xl
           shadow-sm
           border border-base-300
@@ -24,44 +24,45 @@ const GitHubC = () => {
             </svg>
             Coding Activity
           </h3>
-          
           <GitHubCalendar
-            username="mirzawajihali"
-            years={[2023, 2024]}
-            blockSize={14}
-            blockMargin={5}
-            fontSize={14}
-            hideColorLegend={false}
-            hideMonthLabels={false}
-            showWeekdayLabels
-            theme={{
-              light: [
-                '#000000', // black for zero contributions
-                '#99f6e4', // light green
-                '#2dd4bf', // medium-light green
-                '#14b8a6', // medium green
-                '#0f766e', // dark green
-              ],
-              dark: [
-                '#ffffff', // white for zero contributions
-                '#99f6e4', // light green
-                '#2dd4bf', // medium-light green
-                '#14b8a6', // medium green
-                '#0f766e', // dark green
-              ],
-            }}
-            className="
-              w-full 
-              [&>svg]:rounded-lg 
-              [&>svg]:overflow-hidden
-              [&_rect]:transition-all 
-              [&_rect]:duration-200
-              [&_rect:hover]:opacity-80
-              [&_rect:hover]:scale-105
-              [&>svg>text]:text-sm
-              [&>svg>text]:text-base-content/80
-            "
-          />
+  username="mirzawajihali"
+  years={[2023, 2024]}
+  blockSize={14}
+  blockMargin={5}
+  fontSize={14}
+  hideColorLegend={false}
+  hideMonthLabels={false}
+  showWeekdayLabels
+  theme={{
+    light: [
+      '#000000',
+      '#99f6e4',
+      '#2dd4bf',
+      '#14b8a6',
+      '#0f766e',
+    ],
+    dark: [
+      '#ffffff',
+      '#99f6e4',
+      '#2dd4bf',
+      '#14b8a6',
+      '#0f766e',
+    ],
+  }}
+  className={`
+    w-full 
+    [&>svg]:rounded-lg 
+    [&>svg]:overflow-hidden
+    [&_rect]:transition-all 
+    [&_rect]:duration-200
+    [&_rect:hover]:opacity-80
+    [&_rect:hover]:scale-105
+    [&>svg>text]:text-sm
+    [&>svg>text]:text-base-content/80
+    [&_rect]:border
+    [&_rect]:border-gray-900
+  `}
+/>
           
           <div className="flex justify-between mt-4 text-sm text-base-content/60">
             <span>Less</span>

@@ -27,7 +27,7 @@ const Header = () => {
       <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-6">
         {/* Profile Card - 3 cols */}
         <MotionDiv 
-          className="bg-base-200 rounded-3xl p-6 flex flex-col md:col-span-3 lg:col-span-4"
+          className="bg-base-300 rounded-3xl p-6 flex flex-col md:col-span-3 lg:col-span-5"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -71,7 +71,7 @@ I'm passionate about creating intuitive and impactful web applications that solv
 
         {/* Projects Card - 2 cols */}
         <MotionDiv 
-          className="bg-base-200 rounded-3xl p-6 flex flex-col md:col-span-3 lg:col-span-4"
+          className="bg-base-300 rounded-3xl p-6 flex flex-col md:col-span-3 lg:col-span-3"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
@@ -118,14 +118,14 @@ I'm passionate about creating intuitive and impactful web applications that solv
           onMouseEnter={() => setIsHoveredProfiles(true)}
           onMouseLeave={() => setIsHoveredProfiles(false)}
         >
-          <div className="bg-base-200 rounded-3xl  p-10 ">
+          <div className="bg-base-300 rounded-3xl  p-10 ">
           <div className="grid grid-cols-5 gap-4 mb-8">
         {/* Github */}
         <a 
           href="https://dribbble.com/yourusername" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="bg-base-300 rounded-full p-4 flex items-center justify-center hover:bg-base-200 transition-colors"
+          className="bg-base-300 rounded-full p-4 flex items-center justify-center hover:bg-base-300 transition-colors"
         >
           <FaGithub className="w-6 h-6" />
         </a>
@@ -135,7 +135,7 @@ I'm passionate about creating intuitive and impactful web applications that solv
           href="https://twitter.com/yourusername" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="bg-base-300 rounded-full p-4 flex items-center justify-center hover:bg-base-200 transition-colors"
+          className="bg-base-300 rounded-full p-4 flex items-center justify-center hover:bg-base-300 transition-colors"
         >
           <FaTwitter className="w-6 h-6" />
         </a>
@@ -145,7 +145,7 @@ I'm passionate about creating intuitive and impactful web applications that solv
           href="https://facebook.com/yourusername" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="bg-base-300 rounded-full p-4 flex items-center justify-center hover:bg-base-200 transition-colors"
+          className="bg-base-300 rounded-full p-4 flex items-center justify-center hover:bg-base-300 transition-colors"
         >
           <FaFacebook className="w-6 h-6" />
         </a>
@@ -155,7 +155,7 @@ I'm passionate about creating intuitive and impactful web applications that solv
           href="https://instagram.com/yourusername" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="bg-base-300 rounded-full p-4 flex items-center justify-center hover:bg-base-200 transition-colors"
+          className="bg-base-300 rounded-full p-4 flex items-center justify-center hover:bg-base-300 transition-colors"
         >
           <FaInstagram className="w-6 h-6" />
         </a>
@@ -165,7 +165,7 @@ I'm passionate about creating intuitive and impactful web applications that solv
           href="https://linkedin.com/in/yourusername" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="bg-base-300 rounded-full p-4 flex items-center justify-center hover:bg-base-200 transition-colors"
+          className="bg-base-300 rounded-full p-4 flex items-center justify-center hover:bg-base-300 transition-colors"
         >
           <FaLinkedin className="w-6 h-6" />
         </a>
@@ -176,7 +176,7 @@ I'm passionate about creating intuitive and impactful web applications that solv
           </div>
         </div>
       
-  <div className="bg-base-200 rounded-3xl p-10 " >
+  <div className="bg-base-300 rounded-3xl p-10 " >
   <div className="flex-grow flex flex-col justify-between mt-3">
     <div className="flex md:flex-row flex-col justify-around gap-8 w-full">
       <div className="flex flex-col items-center">
@@ -210,7 +210,7 @@ I'm passionate about creating intuitive and impactful web applications that solv
 
         {/* Education Card - 2 cols */}
         <MotionDiv 
-          className="bg-base-200 rounded-3xl p-6 flex flex-col md:col-span-4 lg:col-span-5"
+          className="bg-base-300 rounded-3xl p-6 flex flex-col md:col-span-4 lg:col-span-5"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
@@ -252,7 +252,7 @@ I'm passionate about creating intuitive and impactful web applications that solv
 
           {/* Credentials Card - 2 cols */}
           <MotionDiv 
-          className="bg-base-200 rounded-3xl p-6 flex flex-col md:col-span-3 lg:col-span-4"
+          className="bg-base-300 rounded-3xl p-6 flex flex-col md:col-span-3 lg:col-span-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
@@ -290,7 +290,7 @@ I'm passionate about creating intuitive and impactful web applications that solv
 
         {/* Services Card - 4 cols */}
         <MotionDiv 
-          className="bg-base-200 rounded-3xl p-6 flex flex-col md:col-span-2 lg:col-span-3"
+          className="bg-base-300 rounded-3xl p-6 flex flex-col md:col-span-2 lg:col-span-3"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
@@ -340,7 +340,7 @@ I'm passionate about creating intuitive and impactful web applications that solv
 
 
         <MotionDiv 
-  className="bg-base-200 rounded-3xl p-6 w-full flex flex-col  justify-center  md:col-span-12"
+  className="bg-base-300 rounded-3xl p-6 w-full flex flex-col  justify-center  md:col-span-12"
   initial={{ opacity: 0, y: 20 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.5, delay: 0.7 }}
@@ -358,7 +358,7 @@ I'm passionate about creating intuitive and impactful web applications that solv
 
 
 <MotionDiv 
-  className="bg-base-200 rounded-3xl p-6 w-full flex flex-col  justify-center  md:col-span-12"
+  className="bg-base-300 rounded-3xl p-6 w-full flex flex-col  justify-center  md:col-span-12"
   initial={{ opacity: 0, y: 20 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.5, delay: 0.7 }}

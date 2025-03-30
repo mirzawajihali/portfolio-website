@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import React from "react";
+
+import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 
 const Navbar = () => {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
@@ -16,6 +19,26 @@ const Navbar = () => {
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
   }, [theme]);
+
+  const navItems = [
+    {
+      name: "Home",
+      link: "/",
+      icon: <IconHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
+    },
+    {
+      name: "About",
+      link: "/about",
+      icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
+    },
+    {
+      name: "Contact",
+      link: "/contact",
+      icon: (
+        <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />
+      ),
+    },
+  ];
 
   return (
     <div className="navbar bg-base-100 px-4 md:px-8 lg:px-12 shadow-sm fixed top-0 z-50">
@@ -97,6 +120,10 @@ const Navbar = () => {
         </div>
       </div>
     </div>
+    
+
+
+
   );
 };
 

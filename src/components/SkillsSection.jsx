@@ -72,7 +72,7 @@ const SkillsSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.4 }}
         >
-          My <span className="text-primary">Skills</span>
+          My <span className="text--[#2dd4bf]">Skills</span>
         </motion.h2>
         
         <motion.div
@@ -96,7 +96,7 @@ const SkillsSection = () => {
               </div>
               <div className="h-2 w-full bg-base-300 rounded-full overflow-hidden">
                 <motion.div 
-                  className="h-full bg-primary rounded-full"
+                  className="h-full bg-[#2dd4bf] rounded-full"
                   variants={progressVariants}
                   custom={skill.confidence}
                 />

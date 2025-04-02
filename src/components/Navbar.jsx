@@ -42,7 +42,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="navbar bg-base-100 px-4 md:px-8 lg:px-12 shadow-sm fixed top-0 z-50">
+    <div className="navbar bg-base-100 px-4 md:px-8 lg:px-12 shadow-sm fixed top-0 z-5">
   <div className="navbar-start">
   <Link 
     to="/" 

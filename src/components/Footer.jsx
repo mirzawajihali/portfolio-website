@@ -114,7 +114,7 @@ const Footer = () => {
               className="text-3xl font-bold flex items-center gap-2"
               whileHover={{ scale: 1.05 }}
             >
-              <FaCode className="text-primary" />
+              <FaCode className="text-[#2dd4bf]" />
               <span>Mirza Wajih Ali</span>
             </motion.div>
             <p className="text-base-content/80 max-w-xs">
@@ -124,7 +124,7 @@ const Footer = () => {
 
           {/* Quick links */}
           <motion.div variants={itemVariants} className="space-y-4">
-            <h3 className="text-lg font-semibold mb-4 border-l-4 border-primary pl-3">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4 border-l-4 border-[#2dd4bf] pl-3">Quick Links</h3>
             <ul className="space-y-2">
               {navLinks.map((link, index) => (
                 <motion.li 
@@ -134,7 +134,7 @@ const Footer = () => {
                 >
                   <Link 
                     to={link.path} 
-                    className="hover:text-primary transition-colors duration-300"
+                    className="hover:text-[#2dd4bf] transition-colors duration-300"
                   >
                     {link.name}
                   </Link>
@@ -145,7 +145,7 @@ const Footer = () => {
 
           {/* Contact info */}
           <motion.div variants={itemVariants} className="space-y-4">
-            <h3 className="text-lg font-semibold mb-4 border-l-4 border-primary pl-3">Get In Touch</h3>
+            <h3 className="text-lg font-semibold mb-4 border-l-4 border-[#2dd4bf] pl-3">Get In Touch</h3>
             <motion.div 
               className="bg-base-300 p-4 rounded-lg transform transition duration-300 hover:translate-y-[-5px] hover:shadow-lg"
               whileHover={{ scale: 1.02 }}
@@ -165,7 +165,7 @@ const Footer = () => {
 
           {/* Social links */}
           <motion.div variants={itemVariants} className="space-y-4">
-            <h3 className="text-lg font-semibold mb-4 border-l-4 border-primary pl-3">Follow Me</h3>
+            <h3 className="text-lg font-semibold mb-4 border-l-4 border-[#2dd4bf] pl-3">Follow Me</h3>
             <div className="flex gap-4">
               {socialLinks.map((social, index) => (
                 <motion.a
@@ -173,7 +173,7 @@ const Footer = () => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 flex items-center justify-center rounded-lg bg-base-300 text-base-content hover:bg-gray-700 hover:text-primary-content transition-colors duration-300"
+                  className="w-10 h-10 flex items-center justify-center rounded-lg bg-base-300 text-base-content hover:bg-gray-700 hover:text-[#2dd4bf]-content transition-colors duration-300"
                   whileHover={{ 
                     scale: 1.2,
                     rotate: 10
@@ -228,7 +228,7 @@ const Footer = () => {
 
       {/* Scroll to top button */}
       <motion.button
-        className="fixed bottom-6 right-6 p-3 rounded-full bg-gray-700 text-primary-content shadow-lg z-50"
+        className="fixed bottom-6 right-6 p-3 rounded-full bg-gray-700 text-[#2dd4bf]-content shadow-lg z-50"
         onClick={scrollToTop}
         initial={{ opacity: 0, scale: 0 }}
         animate={{ 

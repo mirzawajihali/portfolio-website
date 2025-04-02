@@ -10,6 +10,7 @@ import SkillsSection from './SkillsSection';
 
 
 
+
 const Header = () => {
   const [isHoveredCredentials, setIsHoveredCredentials] = useState(false);
   const [isHoveredProjects, setIsHoveredProjects] = useState(false);
@@ -27,6 +28,7 @@ const Header = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-6">
         {/* Profile Card - 3 cols */}
+       
         <MotionDiv 
           className="bg-base-300 rounded-3xl p-6 flex flex-col md:col-span-3 lg:col-span-5"
           initial={{ opacity: 0, y: 20 }}
@@ -65,6 +67,7 @@ I'm passionate about creating intuitive and impactful web applications that solv
             </MotionDiv>
           </div>
         </MotionDiv>
+        
 
         
 
@@ -359,7 +362,7 @@ I'm passionate about creating intuitive and impactful web applications that solv
 
 
 <MotionDiv 
-  className="bg-base-300 rounded-3xl p-6 w-full flex flex-col lg:flex-row  justify-center  md:col-span-12"
+  className=" rounded-3xl p-6 w-full flex gap-10 flex-col lg:flex-row  justify-center  md:col-span-12"
   initial={{ opacity: 0, y: 20 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.5, delay: 0.7 }}
@@ -367,21 +370,18 @@ I'm passionate about creating intuitive and impactful web applications that solv
   onMouseLeave={() => setIsHoveredWork(false)}
 >
       
-<div className=" w-1/2 ">
+<div className="bg-base-300 p-6 rounded-3xl lg:w-1/2  ">
   
 <SkillsSection></SkillsSection>
 </div>
 
 
-<div className="text-5xl text-center w-1/2 font-bold">
-      Let's work <span className="text-blue-500">together.</span>
+<div className="text-5xl text-center rounded-3xl bg-base-300 p-6  lg:w-1/2 font-bold">
+      Let's work <span className="text-[#2dd4bf]">together.</span>
     </div>
 
         </MotionDiv>
 
-
-
- 
 
       </div>
              

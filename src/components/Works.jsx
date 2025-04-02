@@ -125,14 +125,14 @@ const Works = () => {
                                <a 
                                  href={project.live}
                                  target="_blank" 
-                                 className="bg-base-100 text-primary px-5 py-2 rounded-full font-medium hover:bg-primary hover:text-primary-content transition-all flex items-center gap-2 shadow-md hover:shadow-lg"
+                                 className="bg-base-100 text--[#2dd4bf] px-5 py-2 rounded-full font-medium hover:bg--[#2dd4bf] hover:text--[#2dd4bf]-content transition-all flex items-center gap-2 shadow-md hover:shadow-lg"
                                >
                                  <FiExternalLink className="w-4 h-4" />
                                  Live Demo
                                </a>
                                <a 
                                  href={project.repository}
-                                 className="bg-primary text-primary-content px-5 py-2 rounded-full font-medium hover:bg-primary-focus transition-all flex items-center gap-2 shadow-md hover:shadow-lg"
+                                 className="bg--[#2dd4bf] text--[#2dd4bf]-content px-5 py-2 rounded-full font-medium hover:bg--[#2dd4bf]-focus transition-all flex items-center gap-2 shadow-md hover:shadow-lg"
                                >
                                  <FiGithub className="w-4 h-4" />
                                  Code
@@ -148,7 +148,7 @@ const Works = () => {
                                {project.title}
                              </h3>
                              {project.featured && (
-                               <span className="bg-primary/20 text-primary px-3 py-1 rounded-full text-xs font-medium tracking-wide">
+                               <span className="bg--[#2dd4bf]/20 text--[#2dd4bf] px-3 py-1 rounded-full text-xs font-medium tracking-wide">
                                  FEATURED
                                </span>
                              )}
@@ -164,7 +164,7 @@ const Works = () => {
                                <motion.span
                                  key={techIndex}
                                  className="bg-base-200 text-base-content/80 px-3 py-1 rounded-full text-xs cursor-default"
-                                 whileHover={{ scale: 1.05, backgroundColor: "var(--primary-focus)", color: "var(--primary-content)" }}
+                                 whileHover={{ scale: 1.05, backgroundColor: "var(---[#2dd4bf]-focus)", color: "var(---[#2dd4bf]-content)" }}
                                >
                                  {tech}
                                </motion.span>
@@ -175,14 +175,14 @@ const Works = () => {
                            {project.caseStudyUrl && (
                              <motion.a
                                href={project.caseStudyUrl}
-                               className="inline-block mt-3 text-primary font-medium group/link"
+                               className="inline-block mt-3 text--[#2dd4bf] font-medium group/link"
                                whileHover={{ x: 3 }}
                              >
                                <div className="flex items-center gap-1">
                                  <span>View Case Study</span>
                                  <FiArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
                                </div>
-                               <div className="h-0.5 bg-primary/30 w-0 group-hover/link:w-full transition-all duration-300" />
+                               <div className="h-0.5 bg--[#2dd4bf]/30 w-0 group-hover/link:w-full transition-all duration-300" />
                              </motion.a>
                            )}
                          </div>

@@ -7,6 +7,7 @@ import developer from "../assets/images/developer.png"
 import project from "../assets/images/studentManagment.png"
 import GitHubC from './GitHubC';
 import SkillsSection from './SkillsSection';
+import { LampContainer } from './ui/lamp';
 
 
 
@@ -22,7 +23,7 @@ const Header = () => {
   const MotionDiv = motion.div;
 
   return (
-    <div className="py-8">
+    <div className=" ">
       {/* Marquee text for featured work */}
       <Marquee text="Passionate Web Developer | Creating Responsive & User-Friendly Websites | Let’s Build Something Amazing!" />
 
@@ -180,19 +181,19 @@ I'm passionate about creating intuitive and impactful web applications that solv
           </div>
         </div>
       
-  <div className="bg-base-300 rounded-3xl p-10 " >
+  <div className="bg-base-300 rounded-3xl py-10 px-2 " >
   <div className="flex-grow flex flex-col justify-between mt-3">
-    <div className="flex md:flex-row flex-col justify-around gap-8 w-full">
-      <div className="flex flex-col items-center">
-        <span className="text-3xl font-bold">07</span>
+    <div className="flex md:flex-row flex-col justify-around g-1 w-full">
+      <div className="flex flex-col gap-3  items-center">
+        <span className="text-3xl font-bold">2</span>
         <span className="text-xs uppercase text-base-content/70">YEARS EXPERIENCE</span>
       </div>
-      <div className="flex flex-col items-center">
-        <span className="text-3xl font-bold">+125</span>
+      <div className="flex flex-col gap-3 items-center">
+        <span className="text-3xl font-bold">+5</span>
         <span className="text-xs uppercase text-base-content/70">CLIENTS WORLDWIDE</span>
       </div>
-      <div className="flex flex-col items-center">
-        <span className="text-3xl font-bold">+210</span>
+      <div className="flex flex-col gap-3 items-center">
+        <span className="text-3xl font-bold">+10</span>
         <span className="text-xs uppercase text-base-content/70">TOTAL PROJECTS</span>
       </div>
     </div>
@@ -376,9 +377,11 @@ I'm passionate about creating intuitive and impactful web applications that solv
 </div>
 
 
-<div className="text-5xl text-center rounded-3xl bg-base-300 p-6  lg:w-1/2 font-bold">
+<LampContainer  className=" rounded-3xl bg-base-300 p-6  lg:w-1/2  ">
+<div  className="text-5xl text-center  font-bold">
       Let's work <span className="text-[#2dd4bf]">together.</span>
     </div>
+</LampContainer>
 
         </MotionDiv>
 

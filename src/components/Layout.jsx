@@ -18,14 +18,14 @@ const Layout = () => {
     <div className= " min-h-screen bg-base-200">
       <Navbar />
    
-    <LampContainer className="">
-     <main className="pt-24 mt-80 px-4 md:px-8 lg:px-12">
+    
+     <main className="pt-24 px-4 md:px-8 lg:px-12">
        
        <Outlet></Outlet>
        
  
        </main>
-     </LampContainer>
+    
     
       <Footer></Footer>
     </div>

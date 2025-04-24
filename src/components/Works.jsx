@@ -1,5 +1,5 @@
 import React from 'react';
- import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { FiArrowRight, FiExternalLink, FiGithub } from 'react-icons/fi';
 
 const Works = () => {
@@ -87,7 +87,7 @@ const Works = () => {
                     </motion.div>
 
                     <motion.div 
-                        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                        className="flex flex-col space-y-12"
                         variants={containerVariants}
                         initial="hidden"
                         whileInView="visible"
@@ -95,98 +95,101 @@ const Works = () => {
                     >
                         {projects.map((project, index) => (
                          <motion.div 
-                         key={index}
-                         className="bg-base-100 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 group border border-base-300"
-                         variants={itemVariants}
-                         whileHover={{ y: -5 }}
-                       >
-                         {/* Screenshot Container with Parallax Effect */}
-                         <div className="relative h-56 overflow-hidden bg-base-200">
-                           {/* Image with zoom effect */}
-                           <motion.img 
-                             src={project.image}
-                             alt={project.title}
-                             className="w-full h-full p-2 rounded-lg object-cover"
-                             initial={{ scale: 1 }}
-                             whileHover={{ scale: 1.05 }}
-                             transition={{ duration: 0.5 }}
-                           />
-                           
-                           {/* Gradient Overlay */}
-                           <div className="absolute inset-0 bg-gradient-to-t from-base-300/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                           
-                           {/* Action Buttons - Slide Up */}
-                           <motion.div 
-                             className="absolute bottom-0 left-0 right-0 p-4 translate-y-10 group-hover:translate-y-0 transition-transform duration-500"
-                             initial={{ opacity: 0 }}
-                             whileHover={{ opacity: 1 }}
-                           >
-                             <div className="flex justify-center gap-3">
-                               <a 
-                                 href={project.live}
-                                 target="_blank" 
-                                 className="bg-base-100 text--[#2dd4bf] px-5 py-2 rounded-full font-medium hover:bg--[#2dd4bf] hover:text--[#2dd4bf]-content transition-all flex items-center gap-2 shadow-md hover:shadow-lg"
-                               >
-                                 <FiExternalLink className="w-4 h-4" />
-                                 Live Demo
-                               </a>
-                               <a 
-                                 href={project.repository}
-                                 className="bg--[#2dd4bf] text--[#2dd4bf]-content px-5 py-2 rounded-full font-medium hover:bg--[#2dd4bf]-focus transition-all flex items-center gap-2 shadow-md hover:shadow-lg"
-                               >
-                                 <FiGithub className="w-4 h-4" />
-                                 Code
-                               </a>
+                             key={index}
+                             className="bg-base-100 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-500 group border border-base-300 w-full"
+                             variants={itemVariants}
+                             whileHover={{ y: -5 }}
+                         >
+                             <div className="flex flex-col lg:flex-row">
+                                 {/* Image Container - Takes 40% width on desktop */}
+                                 <div className="relative lg:w-2/5 h-64 lg:h-auto overflow-hidden bg-base-200">
+                                     <motion.img 
+                                         src={project.image}
+                                         alt={project.title}
+                                         className="w-full h-full object-cover"
+                                         initial={{ scale: 1 }}
+                                         whileHover={{ scale: 1.05 }}
+                                         transition={{ duration: 0.5 }}
+                                     />
+                                     
+                                     {/* Gradient Overlay */}
+                                     <div className="absolute inset-0 bg-gradient-to-t from-base-300/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                 </div>
+                             
+                                 {/* Content Container - Takes 60% width on desktop */}
+                                 <div className="p-8 lg:w-3/5 flex flex-col justify-between">
+                                     <div>
+                                         <div className="flex justify-between items-center mb-4">
+                                             <h3 className="text-2xl font-bold text-base-content tracking-tight">
+                                                 {project.title}
+                                             </h3>
+                                             {project.featured && (
+                                                 <span className="bg-primary/20 text-primary px-3 py-1 rounded-full text-xs font-medium tracking-wide">
+                                                     FEATURED
+                                                 </span>
+                                             )}
+                                         </div>
+                                         
+                                         <p className="text-base-content/70 leading-relaxed mb-6">
+                                             {project.description}
+                                         </p>
+                                         
+                                         {/* Tech Tags with Hover Effects */}
+                                         <div className="flex flex-wrap gap-2 mb-8">
+                                             {project.technologies.map((tech, techIndex) => (
+                                                 <motion.span
+                                                     key={techIndex}
+                                                     className="bg-base-200 text-base-content/80 px-4 py-2 rounded-full text-sm cursor-default"
+                                                     whileHover={{ scale: 1.05, backgroundColor: "var(--primary-focus)", color: "var(--primary-content)" }}
+                                                 >
+                                                     {tech}
+                                                 </motion.span>
+                                             ))}
+                                         </div>
+                                     </div>
+                                     
+                                     {/* Action Buttons */}
+                                     <div className="flex gap-4 mt-auto">
+                                         {project.live && (
+                                             <a 
+                                                 href={project.live}
+                                                 target="_blank" 
+                                                 className="bg-primary text-primary-content px-6 py-3 rounded-lg font-medium hover:bg-primary-focus transition-all flex items-center gap-2 shadow-md hover:shadow-lg"
+                                                 rel="noreferrer"
+                                             >
+                                                 <FiExternalLink className="w-5 h-5" />
+                                                 Live Demo
+                                             </a>
+                                         )}
+                                         {project.repository && (
+                                             <a 
+                                                 href={project.repository}
+                                                 target="_blank"
+                                                 className="bg-base-200 text-base-content px-6 py-3 rounded-lg font-medium hover:bg-base-300 transition-all flex items-center gap-2 shadow-md hover:shadow-lg"
+                                                 rel="noreferrer"
+                                             >
+                                                 <FiGithub className="w-5 h-5" />
+                                                 Source Code
+                                             </a>
+                                         )}
+                                         
+                                         {/* Case Study Link with Animated Arrow */}
+                                         {project.caseStudyUrl && (
+                                             <motion.a
+                                                 href={project.caseStudyUrl}
+                                                 className="inline-flex items-center px-6 py-3 text-primary font-medium group/link"
+                                                 whileHover={{ x: 3 }}
+                                                 target="_blank"
+                                                 rel="noreferrer"
+                                             >
+                                                 <span>View Case Study</span>
+                                                 <FiArrowRight className="w-5 h-5 ml-2 transition-transform group-hover/link:translate-x-1" />
+                                             </motion.a>
+                                         )}
+                                     </div>
+                                 </div>
                              </div>
-                           </motion.div>
-                         </div>
-                       
-                         {/* Content with Elegant Typography */}
-                         <div className="p-6 space-y-4">
-                           <div className="flex justify-between items-center">
-                             <h3 className="text-xl font-bold text-base-content tracking-tight">
-                               {project.title}
-                             </h3>
-                             {project.featured && (
-                               <span className="bg--[#2dd4bf]/20 text--[#2dd4bf] px-3 py-1 rounded-full text-xs font-medium tracking-wide">
-                                 FEATURED
-                               </span>
-                             )}
-                           </div>
-                           
-                           <p className="text-base-content/70 leading-relaxed text-sm">
-                             {project.description}
-                           </p>
-                           
-                           {/* Tech Tags with Hover Effects */}
-                           <div className="flex flex-wrap gap-2 pt-2">
-                             {project.technologies.map((tech, techIndex) => (
-                               <motion.span
-                                 key={techIndex}
-                                 className="bg-base-200 text-base-content/80 px-3 py-1 rounded-full text-xs cursor-default"
-                                 whileHover={{ scale: 1.05, backgroundColor: "var(---[#2dd4bf]-focus)", color: "var(---[#2dd4bf]-content)" }}
-                               >
-                                 {tech}
-                               </motion.span>
-                             ))}
-                           </div>
-                           
-                           {/* Case Study Link with Animated Arrow */}
-                           {project.caseStudyUrl && (
-                             <motion.a
-                               href={project.caseStudyUrl}
-                               className="inline-block mt-3 text--[#2dd4bf] font-medium group/link"
-                               whileHover={{ x: 3 }}
-                             >
-                               <div className="flex items-center gap-1">
-                                 <span>View Case Study</span>
-                                 <FiArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
-                               </div>
-                               <div className="h-0.5 bg--[#2dd4bf]/30 w-0 group-hover/link:w-full transition-all duration-300" />
-                             </motion.a>
-                           )}
-                         </div>
-                       </motion.div>
+                         </motion.div>
                         ))}
                     </motion.div>
                 </div>

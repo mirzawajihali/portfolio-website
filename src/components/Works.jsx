@@ -31,7 +31,7 @@ const Works = () => {
     const projects = [
         
         {
-            title: "Pawsitive Placements (Not ready yet)",
+            title: "Pawsitive Placements (University Project)",
             image: 'https://i.ibb.co.com/V0W0L2Pf/Screenshot-2025-03-31-001511.png',
             description: "Full-featured online shopping platform with cart, payment integration, and admin dashboard.",
             technologies: ["React", "Redux", "Node.js", "MongoDB"],
@@ -49,15 +49,15 @@ const Works = () => {
         {
             title: "Coffee Store",
             image: "https://i.ibb.co.com/spGy70B6/Screenshot-2025-03-29-221149.png",
-            description: "Instant messaging application with real-time updates and user authentication.",
-            technologies: ["React", "Socket.io", "Firebase", "Tailwind CSS"],
+            description: "Coffee shop related website",
+            technologies: ["React",  "Firebase", "Tailwind CSS"],
             live: 'https://coffee-store-7d628.web.app',
             repository: "https://github.com/mirzawajihali/Coffee-Store-BothEnd"
         },
         {
             title: "Dragon News FrontEnd",
             image: "https://i.ibb.co.com/MxHcy6qS/Screenshot-2025-03-31-001052.png",
-            description: "Instant messaging application with real-time updates and user authentication.",
+            description: "News related website.",
             technologies: ["React", "Socket.io", "Firebase", "Tailwind CSS"],
             live: 'https://dragon-news-frontend-8c73a.web.app',
             repository: "https://github.com/mirzawajihali/dragon-news-frontend"
@@ -65,7 +65,7 @@ const Works = () => {
         {
             title: "Harley Davidson Clone",
             image: "https://i.ibb.co.com/jvqvr5cd/Screenshot-2025-03-31-001240.png",
-            description: "lorem ipsum",
+            description: "Clone of harley davidson website",
             technologies: ["React", "Socket.io", "Firebase", "Tailwind CSS"],
             live: 'https://harley-davidson-wajih.netlify.app/',
             repository: ""

@@ -96,7 +96,7 @@ const Works = () => {
                         {projects.map((project, index) => (
                          <motion.div 
                              key={index}
-                             className="bg-base-100 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-500 group border border-base-300 w-full"
+                             className="bg-base-300 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-500 group border border-base-300 w-full"
                              variants={itemVariants}
                              whileHover={{ y: -5 }}
                          >

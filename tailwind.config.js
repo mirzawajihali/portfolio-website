@@ -26,9 +26,10 @@ export default {
         },
         dark: {
           ...require("daisyui/src/theming/themes")["dark"],
-          "base-100": "#000000",   // Changed from #131313 to #000000 (pitch black)
-          "base-200": "#1e1e1e",
-          "base-300": "#000000",
+          "base-100": "#131313",   // Restored to original dark gray (not pure black)
+          "base-200": "#000000",   // Dark gray for contrast
+          "base-300": "#000000",   // Darker gray for contrast
+          "neutral": "#2a303c",    // Original neutral color
         },
       },
     ],

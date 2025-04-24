@@ -35,7 +35,7 @@ const Works = () => {
             image: 'https://i.ibb.co.com/V0W0L2Pf/Screenshot-2025-03-31-001511.png',
             description: "Full-featured online shopping platform with cart, payment integration, and admin dashboard.",
             technologies: ["React", "Redux", "Node.js", "MongoDB"],
-            live : 'https://student-management-250a8.web.app',
+            live : 'https://burj-al-arab-d0a77.web.app/',
             repository : "https://github.com/mirzawajihali/Pawsitive-Placements"
         },
         {

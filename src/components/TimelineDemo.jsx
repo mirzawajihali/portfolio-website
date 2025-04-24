@@ -1,5 +1,6 @@
 import React from "react";
 import { Timeline } from "./ui/timeline";
+import ruetbus from "../assets/images/ruetbus.jpg"
 
 export function TimelineDemo() {
   const data = [
@@ -35,13 +36,13 @@ export function TimelineDemo() {
               alt="Coding on laptop"
               width={500}
               height={500}
-              className="aspect-square w-full object-cover shadow-lg" />
+              className="aspect-square w-full object-cover shadow-lg filter grayscale" />
             <img
               src="https://images.unsplash.com/photo-1581276879432-15e50529f34b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
               alt="Computer science algorithms"
               width={500}
               height={500}
-              className="aspect-square w-full object-cover shadow-lg" />
+              className="aspect-square w-full object-cover shadow-lg filter grayscale" />
           </div>
         </div>
       ),
@@ -74,17 +75,17 @@ export function TimelineDemo() {
           </div>
           <div className="grid grid-cols-2 gap-4">
             <img
-              src="https://images.unsplash.com/photo-1456513080867-f24f86c23747?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-              alt="Study materials and books"
+                src="https://img.freepik.com/free-photo/portrait-person-suffering-from-cybersickness-from-using-tech-device-too-long_23-2151393767.jpg?semt=ais_hybrid&w=740"
+              alt="Coding on laptop"
               width={500}
               height={500}
-              className="aspect-square w-full object-cover shadow-lg" />
+              className="aspect-square w-full object-cover shadow-lg filter grayscale" />
             <img
-              src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-              alt="College education"
+              src="https://images.unsplash.com/photo-1581276879432-15e50529f34b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+              alt="Computer science algorithms"
               width={500}
               height={500}
-              className="aspect-square w-full object-cover shadow-lg" />
+              className="aspect-square w-full object-cover shadow-lg filter grayscale" />
           </div>
         </div>
       ),
@@ -117,17 +118,17 @@ export function TimelineDemo() {
           </div>
           <div className="grid grid-cols-2 gap-4">
             <img
-              src="https://images.unsplash.com/photo-1606761568499-6d2451b23c66?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+              src="https://tfe-bd.sgp1.cdn.digitaloceanspaces.com/uploads/1510029650.jpg"
               alt="Computer science classroom"
               width={500}
               height={500}
-              className="aspect-square w-full object-cover shadow-lg" />
+              className="aspect-square w-full object-cover shadow-lg filter grayscale" />
             <img
-              src="https://images.unsplash.com/photo-1580894732930-0babd100d356?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+              src={ruetbus}
               alt="Programming algorithms"
               width={500}
               height={500}
-              className="aspect-square w-full object-cover shadow-lg" />
+              className="aspect-square w-full object-cover shadow-lg filter grayscale" />
           </div>
         </div>
       ),
@@ -164,13 +165,13 @@ export function TimelineDemo() {
               alt="Modern web development workspace"
               width={500}
               height={500}
-              className="aspect-square w-full object-cover shadow-lg" />
+              className="aspect-square w-full object-cover shadow-lg filter grayscale" />
             <img
               src="https://images.unsplash.com/photo-1623479322729-28b25c16b011?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
               alt="Web development code"
               width={500}
               height={500}
-              className="aspect-square w-full object-cover shadow-lg" />
+              className="aspect-square w-full object-cover shadow-lg filter grayscale" />
           </div>
         </div>
       ),

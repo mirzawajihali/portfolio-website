@@ -31,7 +31,7 @@ const Works = () => {
     const projects = [
         
         {
-            title: "Pawsitive Placements",
+            title: "Pawsitive Placements (Not ready yet)",
             image: 'https://i.ibb.co.com/V0W0L2Pf/Screenshot-2025-03-31-001511.png',
             description: "Full-featured online shopping platform with cart, payment integration, and admin dashboard.",
             technologies: ["React", "Redux", "Node.js", "MongoDB"],

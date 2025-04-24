@@ -15,7 +15,7 @@ const Layout = () => {
   }, []);
 
   return (
-    <div className= " min-h-screen bg-base-200">
+    <div className= " min-h-screen bg-base-100">
       <Navbar />
    
     
@@ -32,4 +32,4 @@ const Layout = () => {
   );
 };
 
-export default Layout; 
+export default Layout;

@@ -8,6 +8,7 @@ import project from "../assets/images/studentManagment.png"
 import GitHubC from './GitHubC';
 import SkillsSection from './SkillsSection';
 import { LampContainer } from './ui/lamp';
+import { ContainerTextFlip } from './ui/container-text-flip';
 
 
 
@@ -48,7 +49,9 @@ const Header = () => {
             />
           </div>
           <div className="mb-6">
-            <p className="text-sm text-base-content/70 uppercase">A WEB DESIGNER</p>
+            <p className="text-sm text-base-content/70 uppercase">  <ContainerTextFlip
+      words={["Web Developer", "Competitive Progammer", "Learner"]}
+    /></p>
             <h1 className="text-3xl font-bold mb-2">Mirza Wajih Ali.</h1>
             <p className="text-sm text-base-content/70">
             Hi, I'm a
@@ -363,7 +366,7 @@ I'm passionate about creating intuitive and impactful web applications that solv
 
 
 <MotionDiv 
-  className=" rounded-3xl p-6 w-full flex gap-10 flex-col lg:flex-row  justify-center  md:col-span-12"
+  className=" rounded-3xl  w-full flex gap-10 flex-col lg:flex-row  justify-center  md:col-span-12"
   initial={{ opacity: 0, y: 20 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.5, delay: 0.7 }}

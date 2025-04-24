@@ -26,7 +26,7 @@ export default {
         },
         dark: {
           ...require("daisyui/src/theming/themes")["dark"],
-          "base-100": "#131313",
+          "base-100": "#000000",   // Changed from #131313 to #000000 (pitch black)
           "base-200": "#1e1e1e",
           "base-300": "#000000",
         },
@@ -34,4 +34,4 @@ export default {
     ],
     darkTheme: "dark",
   },
-} 
+}

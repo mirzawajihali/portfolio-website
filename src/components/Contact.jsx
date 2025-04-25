@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaUniversity, FaCheck, FaPaperPlane } from 'react-icons/fa';
-import { Resend } from 'resend';
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaUniversity, FaCheck, FaPaperPlane, FaExclamationCircle } from 'react-icons/fa';
 
 import Loader from './Loader';
 
@@ -13,6 +12,7 @@ const ContactUs = () => {
         message: ''
     });
     const [formStatus, setFormStatus] = useState(null); // null, 'sending', 'success', 'error'
+    const [errorMessage, setErrorMessage] = useState('');
     const [activeTab, setActiveTab] = useState('contact'); // 'contact' or 'faq'
 
     const handleInputChange = (e) => {
@@ -27,8 +27,50 @@ const ContactUs = () => {
         e.preventDefault();
         setFormStatus('sending');
         
-        // Simulate form submission
-        setTimeout(() => {
+        try {
+            console.log('Form submission starting:', formState);
+            
+            // Determine API URL based on environment
+            const apiUrl = window.location.hostname === 'localhost' 
+                ? 'http://localhost:3001/api/send-email'  // Development URL with Express
+                : '/.netlify/functions/send-email';       // Correct path for Netlify Functions
+            
+            console.log('Sending request to:', apiUrl);
+            
+            // Call the API endpoint with improved error handling
+            const response = await fetch(apiUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formState),
+            });
+            
+            // Log the full response status for debugging
+            console.log('Response status:', response.status);
+            
+            // Get response text first to ensure we can see any error messages
+            const responseText = await response.text();
+            console.log('Response text:', responseText);
+            
+            // Try to parse as JSON if possible
+            let data;
+            try {
+                data = JSON.parse(responseText);
+            } catch (jsonError) {
+                console.error('Error parsing JSON response:', jsonError);
+                throw new Error(`Server returned non-JSON response: ${responseText}`);
+            }
+            
+            // Check if response indicates an error
+            if (!response.ok) {
+                console.error('Server error:', data);
+                throw new Error(`Server error: ${data.error || data.message || 'Unknown error'}`);
+            }
+            
+            console.log('Email sent successfully:', data);
+            
+            // Success handling
             setFormStatus('success');
             setFormState({
                 name: '',
@@ -41,24 +83,16 @@ const ContactUs = () => {
             setTimeout(() => {
                 setFormStatus(null);
             }, 3000);
-        }, 1500);
-
-        e.preventDefault();
-
-    const resend = new Resend(process.env.RESEND_KEY); // ⚠️ Avoid exposing API key in frontend!
-
-    try {
-      await resend.emails.send({
-        from: 'Acme <onboarding@resend.dev>',
-        to: 'your-email@gmail.com',
-        subject: `New message from ${formData.name}`,
-        text: formData.message,
-        reply_to: formData.email,
-      });
-      alert('Email sent!');
-    } catch (error) {
-      alert('Failed to send: ' + error.message);
-    }
+        } catch (error) {
+            console.error('Error sending email:', error);
+            setErrorMessage(error.message || 'An error occurred while sending your message');
+            setFormStatus('error');
+            
+            // Reset error status after 10 seconds
+            setTimeout(() => {
+                setFormStatus(null);
+            }, 10000);
+        }
     };
 
     // Animation variants
@@ -176,7 +210,7 @@ const ContactUs = () => {
                                         </div>
                                         <div>
                                             <p className="font-semibold  ">Phone Number</p>
-                                            <p className="">+880 1234-567890</p>
+                                            <p className="">+8801868365556</p>
                                         </div>
                                     </motion.li>
                                     <motion.li 
@@ -188,7 +222,7 @@ const ContactUs = () => {
                                         </div>
                                         <div>
                                             <p className="font-semibold  ">Email Address</p>
-                                            <p className="">info@studenthub.edu</p>
+                                            <p className="">mirzawajihali00@gmail.com</p>
                                         </div>
                                     </motion.li>
                                     <motion.li 
@@ -200,7 +234,7 @@ const ContactUs = () => {
                                         </div>
                                         <div>
                                             <p className="font-semibold  ">Office Hours</p>
-                                            <p className="">Sunday - Thursday, 9am - 5pm</p>
+                                            <p className="">Every day, 9am - 5pm</p>
                                         </div>
                                     </motion.li>
                                 </ul>
@@ -316,6 +350,12 @@ const ContactUs = () => {
                                         </div>
                                     </form>
                                 )}
+                                {formStatus === 'error' && (
+                                    <div className="mt-4 text-red-500 flex items-center">
+                                        <FaExclamationCircle className="mr-2" />
+                                        <span>{errorMessage}</span>
+                                    </div>
+                                )}
                             </div>
                         </motion.div>
                     </motion.div>
@@ -391,4 +431,4 @@ const ContactUs = () => {
     );
 };
 
-export default ContactUs; 
+export default ContactUs;

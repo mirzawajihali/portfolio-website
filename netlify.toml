@@ -1,0 +1,22 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[dev]
+  command = "npm run dev" # Command to start your dev server
+  port = 3000 # Port that the dev server will be listening on
+  targetPort = 5173 # Port of target app server (vite's default)
+  publish = "dist" # Folder with the static content for _redirect file
+
+# Uncomment to use this redirect for Single Page Applications
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# This redirect ensures API requests to /api/* are correctly routed to your functions
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200

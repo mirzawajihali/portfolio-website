@@ -14,7 +14,7 @@ const Home = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
             >
-                <SignatureAnimation />
+              
                 
                 <div className="text-center mt-10 max-w-2xl mx-auto">
                     <motion.p 

@@ -9,6 +9,7 @@ import GitHubC from './GitHubC';
 import SkillsSection from './SkillsSection';
 import { LampContainer } from './ui/lamp';
 import { ContainerTextFlip } from './ui/container-text-flip';
+import SignatureAnimation from './SignatureAnimation';
 
 
 
@@ -268,15 +269,7 @@ I'm passionate about creating intuitive and impactful web applications that solv
           onMouseLeave={() => setIsHoveredCredentials(false)}
         >
           <div className="mb-4 flex justify-center">
-            <img 
-              src="/signature.png" 
-              alt="Signature" 
-              className="h-24 object-contain"
-              onError={(e) => {
-                e.target.onerror = null;
-                e.target.src = "https://placehold.co/200x100/gray/white?text=Signature";
-              }}
-            />
+          <SignatureAnimation></SignatureAnimation>
           </div>
           <div className="mt-auto">
             <p className="text-sm text-base-content/70 uppercase">MORE ABOUT ME</p>

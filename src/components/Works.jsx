@@ -105,7 +105,7 @@ const Works = () => {
                                  <div className="relative lg:w-2/5 h-64 lg:h-auto overflow-hidden bg-base-200">
                                      <motion.img 
                                          src={project.image}
-                                         alt={project.title}
+                                         alt={`${project.title} - Project by Mirza Wajih Ali`}
                                          className="w-full h-full object-cover"
                                          initial={{ scale: 1 }}
                                          whileHover={{ scale: 1.05 }}
